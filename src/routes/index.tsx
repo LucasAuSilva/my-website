@@ -21,33 +21,36 @@ const techBadges = [
 
 function Index() {
   return (
-    <section className='p-8 pt-12 flex flex-col gap-6'>
-      <Badge className='p-2' variant='outline'>
-        <BadgeCheckIcon className='text-green-500' data-icon="inline-start" />
-        Open new projects
+    <section className='p-10 pt-16 flex flex-col gap-8 max-w-2xl'>
+      <Badge className='w-fit p-2' variant='outline'>
+        <span className='size-2 rounded-full bg-green-500' />
+        Open to new projects
       </Badge>
-      <h1 className='text-5xl'>
-        Building things for the <strong className='text-amber-500'>web.</strong>
-      </h1>
-      <p className='text-muted-foreground text-sm'>
-        Software engineer focused on clean interfaces, solid backends, and tools that actually solve problems.
-      </p>
-      <div className='flex gap-2'>
-        <Button variant='default'>
-          See my work
-        </Button>
-        <Button variant='outline'>
-          Get in touch
-        </Button>
+
+      <div className='flex flex-col gap-4'>
+        <h1 className='text-6xl font-medium tracking-tight leading-tight'>
+          Building things for the{' '}
+          <em className='not-italic text-amber-500'>web.</em>
+        </h1>
+        <p className='text-muted-foreground text-base leading-relaxed'>
+          Software engineer focused on clean interfaces, solid backends, and tools that actually solve problems.
+        </p>
       </div>
+
       <div className='flex gap-2'>
-        {techBadges.map(({ label, variant }) => 
-          <Badge className='p-3' variant={variant as any}>
-          {label}
+        <Button>See my work</Button>
+        <Button variant='outline'>Get in touch</Button>
+      </div>
+
+      <div className='flex flex-wrap gap-2'>
+        {techBadges.map(({ label, variant }) => (
+          <Badge key={label} className='px-3 py-1' variant={variant as any}>
+            {label}
           </Badge>
-        )}
+        ))}
       </div>
-      <div className='flex gap-2'>
+
+      <div className='grid grid-cols-4 gap-3 mt-4'>
         <HomeCard title='12+' description='Projects shipped' />
         <HomeCard title='4+' description='Years building' />
         <HomeCard title='5+' description='Years playing RPG' />
