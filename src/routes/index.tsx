@@ -2,7 +2,6 @@ import { HomeCard } from '@/components/home-card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { createFileRoute } from '@tanstack/react-router'
-import { BadgeCheckIcon } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
   component: Index,
