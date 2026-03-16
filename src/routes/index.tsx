@@ -1,7 +1,7 @@
 import { HomeCard } from '@/components/home-card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, useNavigate } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -30,6 +30,8 @@ const techBadges = [
 ]
 
 function Index() {
+  const navigate = useNavigate()
+
   return (
     <article className='p-10 pt-16 flex flex-col gap-8 max-w-2xl'>
       <Badge className='w-fit p-2' variant='outline'>
@@ -48,8 +50,12 @@ function Index() {
       </div>
 
       <div className='flex gap-2'>
-        <Button>See my work</Button>
-        <Button variant='outline'>Get in touch</Button>
+        <Button onClick={() => navigate({ to: '/work' })}>
+          See my work
+        </Button>
+        <Button variant='outline' onClick={() => navigate({ to: '/contact' })}>
+          Get in touch
+        </Button>
       </div>
 
       <div className='flex flex-wrap gap-2'>
@@ -61,7 +67,7 @@ function Index() {
       </div>
 
       <div className='grid grid-cols-4 gap-3 mt-4'>
-        <HomeCard title='12+' description='Projects shipped' />
+        <HomeCard title='6+' description='Projects shipped' />
         <HomeCard title='4+' description='Years building' />
         <HomeCard title='5+' description='Years playing RPG' />
         <HomeCard title='∞' description='Cups of coffee' />

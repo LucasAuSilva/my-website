@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/sidebar"
 import { ThemeModeToggle } from "./theme-mode-toggle"
 import { Home, User, Briefcase, BookOpen, Mail, ArrowRight } from "lucide-react"
-import { Link } from "@tanstack/react-router"
+import { Link, useNavigate } from "@tanstack/react-router"
 import { Button } from "./ui/button"
 import { Separator } from "./ui/separator"
 
@@ -22,6 +22,8 @@ const links = [
 ] as const
 
 export function AppSideBar() {
+  const navigate = useNavigate()
+
   return (
     <Sidebar>
       <SidebarHeader className="p-4">
@@ -54,7 +56,7 @@ export function AppSideBar() {
       <Separator />
       <SidebarFooter className="p-4">
         <ThemeModeToggle />
-        <Button>
+        <Button onClick={() => navigate({ to: '/contact' })}>
           Hire me <ArrowRight />
         </Button>
       </SidebarFooter>
