@@ -4,6 +4,17 @@ import { Badge } from '@/components/ui/badge'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/about')({
+  head: () => ({
+    meta: [
+      { title: 'About - Lucas Silva' },
+      { name: 'description', content: 'Software Engineer based in Curitiba, Brazil.' },
+      { property: 'og:title', content: 'About - Lucas Silva' },
+      { property: 'og:url', content: 'https://lucassilvadev.com/about' },
+    ],
+    links: [
+      { rel: 'canonical', href: 'https://lucassilvadev.com/about' }
+    ]
+  }),
   component: RouteComponent,
 })
 
@@ -24,8 +35,8 @@ const skills = [
 
 function RouteComponent() {
   return (
-    <main className='p-10 pt-16 flex flex-col max-w-2xl'>
-      <SectionHeader title='About me' withBar />
+    <article className='p-10 pt-16 flex flex-col max-w-2xl'>
+      <SectionHeader title='About me' headingLevel='h1' withBar />
       <section className="flex flex-col gap-4 text-base text-muted-foreground leading-relaxed">
         <p>
           I'm Lucas Augusto da Silva, a Software Engineer based in Curitiba, Brazil.
@@ -46,7 +57,7 @@ function RouteComponent() {
         </p>
       </section>
       <section className='mt-6'>
-        <SectionHeader title='Skills' />
+        <SectionHeader title='Skills' headingLevel='h2' />
         <div className='flex gap-2 w-5/6 flex-wrap'>
           {skills.map(({ name, variant }) => (
             <Badge key={name} className='px-3 py-1' variant={variant as any}>
@@ -70,6 +81,6 @@ function RouteComponent() {
           description='Taking the AZ-900 to formally certify my Azure knowledge.'
         />
       </section>
-    </main>
+    </article>
   )
 }

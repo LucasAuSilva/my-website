@@ -4,6 +4,17 @@ import { Button } from '@/components/ui/button'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [
+      { title: 'Lucas Silva | Software Engineer' },
+      { name: 'description', content: 'Software engineer focused on clean interfaces, solid backends, and tools that actually solve problems.' },
+      { property: 'og:title', content: 'Lucas Silva | Software Engineer' },
+      { property: 'og:url', content: 'https://lucassilvadev.com' },
+    ],
+    links: [
+      { rel: 'canonical', href: 'https://lucassilvadev.com' }
+    ]
+  }),
   component: Index,
 })
 
@@ -20,7 +31,7 @@ const techBadges = [
 
 function Index() {
   return (
-    <section className='p-10 pt-16 flex flex-col gap-8 max-w-2xl'>
+    <article className='p-10 pt-16 flex flex-col gap-8 max-w-2xl'>
       <Badge className='w-fit p-2' variant='outline'>
         <span className='size-2 rounded-full bg-green-500' />
         Open to new projects
@@ -55,6 +66,6 @@ function Index() {
         <HomeCard title='5+' description='Years playing RPG' />
         <HomeCard title='∞' description='Cups of coffee' />
       </div>
-    </section>
+    </article>
   )
 }
