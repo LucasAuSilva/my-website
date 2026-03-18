@@ -60,6 +60,21 @@ const projects: ProjectType[] = [
     ]
   },
   {
+    icon: '🖥️',
+    withFeatureTag: false,
+    title: 'Personal Portfolio',
+    description: 'This portfolio — designed from scratch and built with React, TanStack Router, and shadcn/ui. Features dark mode, semantic HTML, and full SEO meta tags.',
+    githubUrl: 'https://github.com/LucasAuSilva/my-website',
+    liveUrl: 'https://lucassilvadev.com',
+    techs: [
+      { label: 'React', variant: 'outline' },
+      { label: 'TypeScript', variant: 'outline' },
+      { label: 'TanStack Router', variant: 'outline' },
+      { label: 'shadcn/ui', variant: 'secondary' },
+      { label: 'Tailwind', variant: 'secondary' },
+    ]
+  },
+  {
     icon: '📋',
     title: 'DM Notes Converter',
     description: 'A small web tool to convert and clean up DM notes from Markdown into Printable PDF format. Built to scratch a real itch — now available for others to use.',
@@ -75,7 +90,7 @@ const projects: ProjectType[] = [
 
 function RouteComponent() {
   return (
-    <article className='p-10 pt-16 flex flex-col gap-8 w-full max-w-4xl'>
+    <article className='p-10 pt-16 flex flex-col gap-8 w-full max-w-5xl'>
       <SectionHeader title='Work & Projects' withBar />
       <section className='grid grid-cols-2 gap-4'>
         {projects.map((props) => (
