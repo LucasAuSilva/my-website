@@ -35,7 +35,7 @@ function Index() {
   const { t } = useTranslation()
 
   return (
-    <article className='p-10 pt-16 flex flex-col gap-8 max-w-2xl'>
+    <article className='p-10 pt-16 flex flex-col gap-6 max-w-2xl'>
       <Badge className='w-fit p-2' variant='outline'>
         <span className='size-2 rounded-full bg-green-500' />
         {t('home.badge')}
@@ -50,6 +50,10 @@ function Index() {
           {t('home.description')}
         </p>
       </div>
+
+      <p className='text-muted-foreground text-sm leading-relaxed max-w-xl'>
+        {t('home.intro')}
+      </p>
 
       <div className='flex gap-2'>
         <Button onClick={() => navigate({ to: '/work' })}>
@@ -66,6 +70,24 @@ function Index() {
             {label}
           </Badge>
         ))}
+      </div>
+
+      <div className='flex flex-col gap-2 pt-2 border-t border-border'>
+        <p className='text-xs font-medium tracking-widest text-muted-foreground uppercase'>
+          {t('home.featuredProject')}
+        </p>
+        <p className='text-sm text-muted-foreground leading-relaxed'>
+          {t('home.featuredProjectDesc')}
+        </p>
+      </div>
+
+      <div className='flex flex-col gap-2'>
+        <p className='text-sm text-muted-foreground font-medium'>
+          {t('home.approachTitle')}
+        </p>
+        <p className='text-sm text-muted-foreground leading-relaxed'>
+          {t('home.approachDesc')}
+        </p>
       </div>
 
       <div className='grid grid-cols-4 gap-3 mt-4'>
