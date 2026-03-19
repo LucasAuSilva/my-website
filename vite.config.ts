@@ -17,6 +17,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     vitePrerenderPlugin({
+      prerenderScript: fileURLToPath(new URL('./src/main.tsx', import.meta.url)),
       additionalPrerenderRoutes: ['/about', '/work', '/blog', '/contact'],
     }),
   ],
