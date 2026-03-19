@@ -1,6 +1,5 @@
 import { ProjectCard, type ProjectType } from '@/components/projects-cards'
 import { SectionHeader } from '@/components/section-header'
-import i18n from '@/i18n'
 import { createFileRoute } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 
