@@ -10,7 +10,9 @@ i18n
       en:    { translation: en },
       'pt-BR': { translation: ptBR },
     },
-    lng: localStorage.getItem('language') ?? 'en',
+    lng: typeof localStorage === 'undefined'
+      ? 'en'
+      : localStorage.getItem('language') ?? 'en',
     fallbackLng: 'en',
     interpolation: { escapeValue: false },
   })
