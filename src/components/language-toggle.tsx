@@ -1,14 +1,16 @@
 import { useTranslation } from 'react-i18next'
 import { Button } from './ui/button'
+import { useLocalStorage } from '@/hooks/use-local-storage'
 
 export function LanguageToggle() {
   const { i18n } = useTranslation()
-  const isBR = i18n.language === 'pt-BR'
+  const [value, set ] = useLocalStorage<string>('language', 'en')
+  const isBR = value === 'pt-BR'
 
   function toggle() {
     const next = isBR ? 'en' : 'pt-BR'
     i18n.changeLanguage(next)
-    localStorage.setItem('language', next)
+    set(next)
   }
 
   return (
