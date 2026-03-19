@@ -12,17 +12,20 @@ import { Home, User, Briefcase, BookOpen, Mail, ArrowRight } from "lucide-react"
 import { Link, useNavigate } from "@tanstack/react-router"
 import { Button } from "./ui/button"
 import { Separator } from "./ui/separator"
+import { LanguageToggle } from "./language-toggle"
+import { useTranslation } from "react-i18next"
 
 const links = [
-  { to: '/',        label: 'Home',    icon: Home      },
-  { to: '/about',   label: 'About',   icon: User      },
-  { to: '/work',    label: 'Work',    icon: Briefcase },
-  { to: '/blog',    label: 'Blog',    icon: BookOpen  },
-  { to: '/contact', label: 'Contact', icon: Mail      },
+  { to: '/',        label: 'nav.home',    icon: Home      },
+  { to: '/about',   label: 'nav.about',   icon: User      },
+  { to: '/work',    label: 'nav.work',    icon: Briefcase },
+  { to: '/blog',    label: 'nav.blog',    icon: BookOpen  },
+  { to: '/contact', label: 'nav.contact', icon: Mail      },
 ] as const
 
 export function AppSideBar() {
   const navigate = useNavigate()
+  const { t } = useTranslation()
 
   return (
     <Sidebar>
@@ -46,7 +49,7 @@ export function AppSideBar() {
                   className="flex items-center gap-2 text-sm px-3 py-2 rounded-lg hover:bg-secondary transition-colors"
                 >
                   <Icon className="h-4 w-4" />
-                  {label}
+                  {t(label)}
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -56,8 +59,9 @@ export function AppSideBar() {
       <Separator />
       <SidebarFooter className="p-4">
         <ThemeModeToggle />
+        <LanguageToggle />
         <Button onClick={() => navigate({ to: '/contact' })}>
-          Hire me <ArrowRight />
+        {t('sidebar.hireMe')} <ArrowRight />
         </Button>
       </SidebarFooter>
     </Sidebar>

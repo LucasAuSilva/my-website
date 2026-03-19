@@ -1,0 +1,62 @@
+{
+  "theme": {
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "work": "Projetos",
+    "blog": "Blog",
+    "contact": "Contato"
+  },
+  "home": {
+    "badge": "Aberto a novos projetos",
+    "title": "Construindo coisas para a",
+    "highlight": "web.",
+    "description": "Engenheiro de software focado em interfaces limpas, backends sólidos e ferramentas que resolvem problemas reais.",
+    "seeWork": "Ver meus projetos",
+    "getInTouch": "Entrar em contato",
+    "projectsShipped": "Projetos feitos",
+    "yearsBuiling": "Anos construindo",
+    "yearsRPG": "Anos jogando RPG",
+    "cupsCoffee": "Copos de café"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "bio1": "Sou Lucas Augusto da Silva, Engenheiro de Software morando em Curitiba, Brasil. Eu me graduei em Engenharia de Software na PUCPR, onde eu construi uma forte base em software design e arquitetura",
+    "bio2": "Me preocupo profundamente em escrever código limpo, focado no cliente e construído para durar. Meus estudos em Domain-Driven Design, Clean Code e TDD não são apenas academicos, eles são a base de como eu contruo cada projeto",
+    "bio3": "Sou genuinamente apaixonado por software e pelo ofício por trás dele. Eu acredito que os melhores engenheiros nunca param de aprender, sempre estou pesquisando sobre novas arquiteturas e padrões, explorando uma programação diferente, ou pegando proglemas que me puxam para fora da zona de conforto. Desafios são onde nós crescemos, e eu nunca fujo deles.",
+    "skills": "Habilidades",
+    "workingOn": "Atualmente trabalhando em",
+    "workingOnDesc": "Ferramentas pessoais que tornam os fluxos de trabalho do dia a dia mais rápidos.",
+    "basedIn": "Morando em",
+    "basedInDesc": "Curitiba, Brasil — disponível para trabalho remoto no mundo todo.",
+    "studying": "Estudando atualmente",
+    "studyingDesc": "Realizando o AZ-900 para certificar formalmente meu conhecimento em Azure."
+  },
+  "work": {
+    "title": "Projetos"
+  },
+  "blog": {
+    "title": "Blog",
+    "comingSoon": "Em breve",
+    "postsOnTheWay": "Posts a caminho",
+    "postsDesc": "Estou trabalhando em escrever sobre coisas que aprendi construindo software. Decisões de arquitetura, ferramentas que uso e lições aprendidas com projetos",
+    "inTheMeantime1": "Enquanto isso, me encontre no",
+    "inTheMeantime2": " ou entre em contato por ",
+    "github": "Github",
+    "email": "E-mail"
+  },
+  "contact": {
+    "title": "Contato",
+    "intro": "Tem uma ideia de projeto, uma pergunta ou só quer bater um papo sobre código?",
+    "email": "E-mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "sidebar": {
+    "hireMe": "Contrate-me"
+  }
+}

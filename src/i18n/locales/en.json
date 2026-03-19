@@ -1,0 +1,62 @@
+{
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "badge": "Open to new projects",
+    "title": "Building things for the",
+    "highlight": "web.",
+    "description": "Software engineer focused on clean interfaces, solid backends, and tools that actually solve problems.",
+    "seeWork": "See my work",
+    "getInTouch": "Get in touch",
+    "projectsShipped": "Projects shipped",
+    "yearsBuiling": "Years building",
+    "yearsRPG": "Years playing RPG",
+    "cupsCoffee": "Cups of coffee"
+  },
+  "about": {
+    "title": "About me",
+    "bio1": "I'm Lucas Augusto da Silva, a Software Engineer based in Curitiba, Brazil. I completed my degree in Software Engineering at PUC PR, where I built a strong foundation in software design and architecture.",
+    "bio2": "I care deeply about writing code that is clean, intentional, and built to last. My studies in Domain-Driven Design, Clean Code, and TDD aren't just academic — they shape how I approach every project.",
+    "bio3": "I'm genuinely passionate about software and the craft behind it. I believe the best engineers never stop learning — whether that's diving into a new architecture pattern, exploring a different language, or taking on a problem that pushes me outside my comfort zone. Challenge is where growth happens, and I've never shied away from it.",
+    "skills": "Skills",
+    "workingOn": "Currently working on",
+    "workingOnDesc": "Personal tools that make everyday dev workflows faster.",
+    "basedIn": "Based in",
+    "basedInDesc": "Curitiba, Brazil — available for remote work worldwide.",
+    "studying": "Currently certifying",
+    "studyingDesc": "Taking the AZ-900 to formally certify my Azure knowledge."
+  },
+  "work": {
+    "title": "Work & Projects"
+  },
+  "blog": {
+    "title": "Blog",
+    "comingSoon": "Coming soon",
+    "postsOnTheWay": "Posts on the way",
+    "postsDesc": "I'm working on writing about things I've learned building software — architecture decisions, tools I use, and lessons from real projects.",
+    "inTheMeantime1": "In the meantime, find me on",
+    "inTheMeantime2": " or reach out via ",
+    "github": "Github",
+    "email": "Email"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Have a project idea, a question, or just want to chat about code?",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "sidebar": {
+    "hireMe": "Hire me"
+  }
+}

@@ -1,6 +1,7 @@
 import { ContactCard } from '@/components/contact-card'
 import { SectionHeader } from '@/components/section-header'
 import { createFileRoute } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 
 export const Route = createFileRoute('/contact')({
   head: () => ({
@@ -18,19 +19,20 @@ export const Route = createFileRoute('/contact')({
 })
 
 const contacts = [
-  { icon: '✉️', title: 'Email', description: 'silvaaugustolucas@gmail.com', link: 'mailto:silvaaugustolucas@gmail.com' },
-  { icon: '💼', title: 'LinkedIn', description: 'https://www.linkedin.com/in/lucas-augusto-silva-6a12aa135', link: 'https://www.linkedin.com/in/lucas-augusto-silva-6a12aa135' },
-  { icon: '🐙', title: 'GitHub', description: 'github.com/LucasAuSilva', link: 'https://github.com/LucasAuSilva' },
+  { icon: '✉️', title: 'contact.email', description: 'silvaaugustolucas@gmail.com', link: 'mailto:silvaaugustolucas@gmail.com' },
+  { icon: '💼', title: 'contact.linkedin', description: 'https://www.linkedin.com/in/lucas-augusto-silva-6a12aa135', link: 'https://www.linkedin.com/in/lucas-augusto-silva-6a12aa135' },
+  { icon: '🐙', title: 'contact.github', description: 'github.com/LucasAuSilva', link: 'https://github.com/LucasAuSilva' },
 ]
 
 function RouteComponent() {
+  const { t } = useTranslation()
+
   return (
    <article className='p-10 pt-16 flex flex-col gap-2 w-full max-w-4xl'>
-      <SectionHeader title='Contact' withBar />
+      <SectionHeader title={t('contact.title')} withBar />
       <section className="flex flex-col gap-4 text-base text-muted-foreground leading-relaxed">
         <p>
-          Have a project idea, a question, or just want to chat
-          about code? I'm always up for a good conversation.
+          {t('contact.intro')}
         </p>
       </section>
       <section className='flex flex-col flex-1 gap-2 mt-4'>
@@ -38,6 +40,7 @@ function RouteComponent() {
           <ContactCard
             key={props.title}
             {...props}
+            title={t(props.title as any)}
           />
         )}
       </section>

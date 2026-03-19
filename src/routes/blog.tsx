@@ -1,6 +1,7 @@
 import { SectionHeader } from '@/components/section-header'
 import { Badge } from '@/components/ui/badge'
 import { createFileRoute } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 
 export const Route = createFileRoute('/blog')({
   head: () => ({
@@ -20,16 +21,17 @@ export const Route = createFileRoute('/blog')({
 interface Post {}
 
 function RouteComponent() {
+  const { t } = useTranslation()
   const posts: Post[] = []
 
   if (posts.length === 0) {
     return (
       <article className='p-10 pt-16 flex flex-col max-w-2xl'>
-        <SectionHeader title='Blog' withBar />
+        <SectionHeader title={t('blog.title')} withBar />
 
         <Badge variant='outline' className='w-fit mb-6'>
           <span className='size-1.5 rounded-full bg-amber-500' />
-          Coming soon
+          {t('blog.comingSoon')}
         </Badge>
 
         <div className='flex flex-col gap-5 p-8 bg-secondary rounded-2xl border border-border'>
@@ -37,10 +39,9 @@ function RouteComponent() {
             ✍️
           </div>
           <div className='flex flex-col gap-2'>
-            <h2 className='text-lg font-medium tracking-tight'>Posts on the way</h2>
+            <h2 className='text-lg font-medium tracking-tight'>{t('blog.postsOnTheWay')}</h2>
             <p className='text-sm text-muted-foreground leading-relaxed'>
-              I'm working on writing about things I've learned building software — 
-              architecture decisions, tools I use, and lessons from real projects.
+              {t('blog.postsDesc')}
             </p>
           </div>
           <div className='flex flex-wrap gap-2'>
@@ -54,7 +55,7 @@ function RouteComponent() {
           <div className='flex items-center gap-2'>
             <span className='size-2 rounded-full bg-amber-500 shrink-0' />
             <p className='text-sm text-muted-foreground'>
-              In the meantime, find me on <strong className='text-foreground font-medium'>GitHub</strong> or reach out via <strong className='text-foreground font-medium'>email</strong>.
+              {t('blog.inTheMeantime1')} <strong className='text-foreground font-medium'>{t('blog.github')}</strong> {t('blog.inTheMeantime2')} <strong className='text-foreground font-medium'>{t('blog.email')}</strong>.
             </p>
           </div>
         </div>
@@ -79,7 +80,7 @@ function RouteComponent() {
 
   return (
     <article className='p-10 pt-16 flex flex-col max-w-2xl'>
-      <SectionHeader title='Blog' withBar />
+      <SectionHeader title={t('blog.title')} withBar />
       {/* post list */}
     </article>
   )

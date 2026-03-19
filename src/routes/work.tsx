@@ -1,6 +1,8 @@
 import { ProjectCard, type ProjectType } from '@/components/projects-cards'
 import { SectionHeader } from '@/components/section-header'
+import i18n from '@/i18n'
 import { createFileRoute } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 
 export const Route = createFileRoute('/work')({
   head: () => ({
@@ -89,9 +91,11 @@ const projects: ProjectType[] = [
 ]
 
 function RouteComponent() {
+  const { t } = useTranslation()
+
   return (
     <article className='p-10 pt-16 flex flex-col gap-8 w-full max-w-5xl'>
-      <SectionHeader title='Work & Projects' withBar />
+      <SectionHeader title={t('work.title')} withBar />
       <section className='grid grid-cols-2 gap-4'>
         {projects.map((props) => (
           <div

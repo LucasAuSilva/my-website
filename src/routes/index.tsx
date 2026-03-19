@@ -2,6 +2,7 @@ import { HomeCard } from '@/components/home-card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -31,30 +32,31 @@ const techBadges = [
 
 function Index() {
   const navigate = useNavigate()
+  const { t } = useTranslation()
 
   return (
     <article className='p-10 pt-16 flex flex-col gap-8 max-w-2xl'>
       <Badge className='w-fit p-2' variant='outline'>
         <span className='size-2 rounded-full bg-green-500' />
-        Open to new projects
+        {t('home.badge')}
       </Badge>
 
       <div className='flex flex-col gap-4'>
         <h1 className='text-6xl font-medium tracking-tight leading-tight'>
-          Building things for the{' '}
-          <em className='not-italic text-amber-500'>web.</em>
+          {t('home.title')}{' '}
+          <em className='not-italic text-amber-500'>{t('home.highlight')}</em>
         </h1>
         <p className='text-muted-foreground text-base leading-relaxed'>
-          Software engineer focused on clean interfaces, solid backends, and tools that actually solve problems.
+          {t('home.description')}
         </p>
       </div>
 
       <div className='flex gap-2'>
         <Button onClick={() => navigate({ to: '/work' })}>
-          See my work
+          {t('home.seeWork')}
         </Button>
         <Button variant='outline' onClick={() => navigate({ to: '/contact' })}>
-          Get in touch
+          {t('home.getInTouch')}
         </Button>
       </div>
 
@@ -67,10 +69,10 @@ function Index() {
       </div>
 
       <div className='grid grid-cols-4 gap-3 mt-4'>
-        <HomeCard title='6+' description='Projects shipped' />
-        <HomeCard title='4+' description='Years building' />
-        <HomeCard title='5+' description='Years playing RPG' />
-        <HomeCard title='∞' description='Cups of coffee' />
+        <HomeCard title='6+' description={t('home.projectsShipped')} />
+        <HomeCard title='4+' description={t('home.yearsBuiling')} />
+        <HomeCard title='5+' description={t('home.yearsRPG')} />
+        <HomeCard title='∞' description={t('home.cupsCoffee')} />
       </div>
     </article>
   )
