@@ -6,6 +6,8 @@ import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 import { fileURLToPath } from 'node:url'
 
+import sitemap from 'vite-plugin-sitemap'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -15,6 +17,16 @@ export default defineConfig({
     }),
     react(),
     tailwindcss(),
+    sitemap({
+      hostname: 'https://lucassilvadev.com',
+      dynamicRoutes: [
+        '/',
+        '/about',
+        '/work',
+        '/blog',
+        '/contact',
+      ],
+    }),
   ],
   resolve: {
     alias: {
