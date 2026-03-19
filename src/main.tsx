@@ -15,6 +15,7 @@ function makeRouter(url?: string) {
     history: url
       ? createMemoryHistory({ initialEntries: [url] })
       : undefined,
+    isServer: !!url
   })
 }
 
