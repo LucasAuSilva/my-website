@@ -1,20 +1,23 @@
 import { AppSideBar } from '@/components/app-side-bar'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
+import { ThemeProvider } from '@/contexts/theme-context'
 import { createRootRoute, HeadContent, Outlet } from '@tanstack/react-router'
 // import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
 const RootLayout = () => (
   <>
     <HeadContent />
-    <SidebarProvider className='h-screen overflow-hidden'>
-      <AppSideBar />
-      <main className='bg-background min-h-screen min-w-screen flex'>
-        <SidebarTrigger />
-        <div className='flex-1 overflow-auto w-full'>
-          <Outlet />
-        </div>
-      </main>
-    </SidebarProvider>
+    <ThemeProvider defaultTheme='system'>
+      <SidebarProvider className='h-screen overflow-hidden'>
+        <AppSideBar />
+        <main className='bg-background min-h-screen min-w-screen flex'>
+          <SidebarTrigger />
+          <div className='flex-1 overflow-auto w-full'>
+            <Outlet />
+          </div>
+        </main>
+      </SidebarProvider>
+    </ThemeProvider>
     {/* <TanStackRouterDevtools /> */}
   </>
 )

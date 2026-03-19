@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
+import { vitePrerenderPlugin } from 'vite-prerender-plugin';
 
 import { fileURLToPath } from 'node:url'
 
@@ -15,6 +16,9 @@ export default defineConfig({
     }),
     react(),
     tailwindcss(),
+    vitePrerenderPlugin({
+      additionalPrerenderRoutes: ['/about', '/work', '/blog', '/contact'],
+    }),
   ],
   resolve: {
     alias: {
