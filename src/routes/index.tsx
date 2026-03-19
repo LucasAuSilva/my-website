@@ -1,4 +1,5 @@
 import { HomeCard } from '@/components/home-card'
+import { SectionHeader } from '@/components/section-header'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
