@@ -77,9 +77,10 @@ const projects: ProjectType[] = [
   },
   {
     icon: '📋',
-    title: 'DM Notes Converter',
-    description: 'A small web tool to convert and clean up DM notes from Markdown into Printable PDF format. Built to scratch a real itch — now available for others to use.',
-    githubUrl: 'https://github.com/LucasAuSilva/dm-notes-converter',
+    title: 'DM Grimoire',
+    description: 'A web app built for Dungeon Masters — convert your Obsidian session notes into print-ready PDFs and track combat in real time. Upload your .md files, configure the layout, and get a formatted PDF ready to print. When the fight starts, use the combat tracker to manage initiative, HP, conditions and get a full combat log at the end.',
+    githubUrl: 'https://github.com/LucasAuSilva/dm-grimoire',
+    liveUrl: 'https://dm-grimoire.lucassilvadev.com/',
     techs: [
       { label: 'Web app', variant: 'outline' },
       { label: 'Open source', variant: 'outline' },
